@@ -68,10 +68,14 @@ class ShopController extends Controller
        
         if (!Storage::disk('local')->exists('test/zag.spr')) {
             $data=Product::withCount('prices')->get();
+            //dd($data[0]->prices);
             $content=$this->text();
             foreach($data as $item){
                // 669;;ARTEL SI 2531;ARTEL SI 2531;430000;0;;0,1,1,1,1,1,1,1,1,0,1,0,0,1;;;;1;1;;;1;1;;;;;;4;;;ARTEL0030;;;;;;;;;;;;;;;;;;;;;;;;;;;;;0;0;;2;;
-                $content=$content.$item->id.";;".$item->name.";".$item->name.";".$item->prices[$item->prices_count-1]->price.";0;;0,1,1,1,1,1,1,1,1,0,1,0,0,1;;;;1;1;;;1;1;;;;;;4;;;".$item->sap.";;;;;;;;;;;;;;;;;;;;;;;;;;;;;0;0;;2;;\n";
+               if($item->prices_count>0){
+                   $content=$content.$item->id.";;".$item->name.";".$item->name.";".$item->prices[$item->prices_count-1]->price.";0;;0,1,1,1,1,1,1,1,1,0,1,0,0,1;;;;1;1;;;1;1;;;;;;4;;;".$item->sap.";;;;;;;;;;;;;;;;;;;;;;;;;;;;;0;0;;2;;\n";
+
+               } 
     
             }
             
