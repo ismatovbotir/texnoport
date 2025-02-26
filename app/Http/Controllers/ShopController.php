@@ -91,23 +91,8 @@ class ShopController extends Controller
 
     }
     protected function text(){
-        $content="##@@&&\n#\n$$\$ADDASPECTSCHMS\n1;Характеристики;Характеристики;\n$$\$ADDASPECTS/n1;1;Характеристики;Характеристики;\n$$\$ADDTAXRATES";
-        $content=$content."1;НДС 0%;НДС 0%;0;0;\n";
-        $content=$content."2;НДС 10%;НДС 10%;0;10;\n";
-        $content=$content."3;НДС 18%;НДС 18%;0;18;\n";
-        $content=$content."4;Без НДС;Без НДС;0;0;\n";
-        $content=$content."$$\$ADDTAXGROUPS\n";
-        $content=$content."1;НДС 0%;НДС 0%;\n";
-        $content=$content."2;НДС 10%;НДС 10%;\n";
-        $content=$content."3;НДС 18%;НДС 18%;\n";
-        $content=$content."4;Без НДС;Без НДС;\n";
-        $content=$content."$$\$ADDTAXGROUPRATES\n";
-        $content=$content."1;1;1;0;\n";
-        $content=$content."1;2;2;0;\n";
-        $content=$content."1;3;3;0;\n";
-        $content=$content."1;4;4;0;\n\n";
+        $content="##@@&&\n#\n";
         
-        $content=$content."$$\$ADDASPECTVALUES\n\n";
         
         $content=$content."$$\$ADDQUANTITY\n";
         
