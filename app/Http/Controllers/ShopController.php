@@ -94,7 +94,7 @@ class ShopController extends Controller
         $content="##@@&&\n#\n";
         
         
-        $content=$content."$$\n$ADDQUANTITY\n\n";
+        $content=$content."$$"."\n\$ADDQUANTITY\n\n";
         
         
         return $content;
