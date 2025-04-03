@@ -73,7 +73,7 @@ class ShopController extends Controller
             foreach($data as $item){
                // 669;;ARTEL SI 2531;ARTEL SI 2531;430000;0;;0,1,1,1,1,1,1,1,1,0,1,0,0,1;;;;1;1;;;1;1;;;;;;4;;;ARTEL0030;;;;;;;;;;;;;;;;;;;;;;;;;;;;;0;0;;2;;
                if($item->prices_count>0){
-                   $content=$content.$item->id.";;".$item->name.";".$item->name.";".$item->prices[$item->prices_count-1]->price.";0;;0,1,1,1,1,1,1,1,1,0,1,0,0,1;;;;1;1;;;1;1;;;;;;4;;;".$item->sap.";;;;;;;;;;;;;;;;;;;;;;;;;;;;;0;0;;2;;\n";
+                   $content=$content.$item->id.";;".$item->name.";".$item->name.";".$item->prices[$item->prices_count-1]->price.";0;;0,1,1,1,1,1,1,1,1,0,1,0,0,1;;;;1;1;;;1;0;;;;;;4;;;".$item->sap.";;;;;;;;;;;;;;;;;;;;;;;;;;;;;0;0;;2;;\n";
 
                } 
     
@@ -91,7 +91,7 @@ class ShopController extends Controller
 
     }
     protected function text(){
-        $content="##@@&&\n#\n";
+        $content="##@@&&\n#\n\n";
         
         
         $content=$content."$$$"."ADDQUANTITY\n";
